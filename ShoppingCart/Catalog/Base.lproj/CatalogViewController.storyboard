@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina5_9" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Catalog-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="CatalogViewController" id="BYZ-38-t0r" customClass="CatalogViewController" customModule="ShoppingCart" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ggh-FR-JBS">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="nFp-Yw-v0g">
+                                <rect key="frame" x="0.0" y="44" width="375" height="734"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="TMj-hF-Naa">
+                                    <size key="itemSize" width="150" height="150"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ProductCollectionViewCell" id="hsv-Rj-vmb" customClass="ProductCollectionViewCell" customModule="ShoppingCart" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Product Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T7D-58-he3">
+                                                    <rect key="frame" x="22.999999999999993" y="65.333333333333329" width="104.33333333333331" height="19.333333333333329"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstItem="T7D-58-he3" firstAttribute="centerX" secondItem="hsv-Rj-vmb" secondAttribute="centerX" id="ZPx-S0-yQS"/>
+                                            <constraint firstItem="T7D-58-he3" firstAttribute="centerY" secondItem="hsv-Rj-vmb" secondAttribute="centerY" id="rNr-0e-99r"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="nameLabel" destination="T7D-58-he3" id="keM-2F-ibw"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="nFp-Yw-v0g" firstAttribute="leading" secondItem="N7J-Jf-hD9" secondAttribute="leading" id="87r-hM-y2w"/>
+                            <constraint firstItem="N7J-Jf-hD9" firstAttribute="bottom" secondItem="nFp-Yw-v0g" secondAttribute="bottom" id="8n0-Ww-2fw"/>
+                            <constraint firstItem="N7J-Jf-hD9" firstAttribute="trailing" secondItem="nFp-Yw-v0g" secondAttribute="trailing" id="ag4-fQ-4cQ"/>
+                            <constraint firstItem="nFp-Yw-v0g" firstAttribute="top" secondItem="N7J-Jf-hD9" secondAttribute="top" id="v61-bO-a8u"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="N7J-Jf-hD9"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Catalog" id="qje-YW-zbN">
+                        <barButtonItem key="rightBarButtonItem" id="F8S-C1-TxI"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="cartButtonItem" destination="F8S-C1-TxI" id="VM9-XO-tho"/>
+                        <outlet property="collectionView" destination="nFp-Yw-v0g" id="J5f-27-9g9"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1079.2" y="133.74384236453201"/>
+        </scene>
+    </scenes>
+</document>
